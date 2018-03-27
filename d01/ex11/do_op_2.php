@@ -9,10 +9,10 @@
 	}
 	function is_valid_data($data) {
 		return (
-			count($data) == 3 &&
 			is_numeric($data[0]) &&
 			is_operator($data[1]) &&
-			is_numeric($data[2])
+			is_numeric($data[2]) &&
+			$data[3] == 0
 		);
 	}
 	function do_op($data) {
@@ -32,9 +32,7 @@
 	if ($argc != 2) {
 		echo "Incorrect Parameters\n";
 	} else {
-		$data = [];
-		preg_match_all("/(\-?\w+|[\+\-\*\/\%])/", $argv[1], $data);
-		$data = $data[0];
+		$data = sscanf($argv[1], "%d %c %d %[^[]]");
 		if (!is_valid_data($data))
 			echo "Syntax Error\n";
 		else
