@@ -3,8 +3,8 @@
 	function create_dict($data) {
 		$dict = [];
 		foreach ($data as $d) {
-			[$k, $v] = explode(":", $d);
-			$dict[$k] = $v;
+			$tmp = explode(":", $d);
+			$dict[$tmp[0]] = $tmp[1];
 		}
 		return ($dict);
 	}

@@ -47,7 +47,7 @@ class User {
 		return ($total / $this->getCorrectionCount(0));
 	}
 
-	function getCorrectionCount($moulinette = 1): int {
+	function getCorrectionCount($moulinette = 1) {
 		return (count($this->corrections) - ($moulinette ? 0 : 1));
 	}
 
@@ -78,7 +78,10 @@ if ($argc == 2) {
 		$data = explode(";", $line);
 		if (count($data) != 4)
 			continue ;
-		[$id, $note, $by, $feedback] = $data;
+		$id = $data[0];
+		$note = $data[1];
+		$by = $data[2];
+		$feedback = $data[3];
 		if (!isset($users[$id]))
 			$users[$id] = new User();
 		$users[$id]->addCorrection($by, $note);
