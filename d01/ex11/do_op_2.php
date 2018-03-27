@@ -33,7 +33,7 @@
 		echo "Incorrect Parameters\n";
 	} else {
 		$data = [];
-		preg_match_all("/(\w+|[\+\-\*\/\%])/", $argv[1], $data);
+		preg_match_all("/(\-?\w+|[\+\-\*\/\%])/", $argv[1], $data);
 		$data = $data[0];
 		if (!is_valid_data($data))
 			echo "Syntax Error\n";
