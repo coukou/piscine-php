@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Day of the 42</title>
+	<link rel="stylesheet" href="./doft.css">
+</head>
+<body>
+	<!-- <div id="preview"></div> -->
+	<div id='header' class='bg-grey shadow'>
+		<div id='header-left'>
+			<img src='./ressources/day_of_the_42.png' height='110px' />
+		</div>
+		<div id='header-right'>
+			<img id='loupe' src='./ressources/loupe.png'/>
+			<div id='header-buttons'>
+				<a href='http://www.disney.com/'>
+					<img id='reload' alt='Recommencer au début' src='./ressources/reload.png'/>
+				</a>
+				<a href='http://www.relaischateaux.com/'>
+					<img id='close' alt='Déconnecter' src='./ressources/close.gif'/>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id='container'>
+		<div id="left-side" class='side bg-grey shadow'>
+			<div class="side-container">
+				<img id="arrow" alt='Avancer' src='./ressources/arrow.png'/>
+				<img id="main" alt='Prendre' src='./ressources/main.png'/>
+				<img id='oeil' alt='Regarder' src='./ressources/oeil.png'/>
+				<img id="outil" alt='Utiliser' src='./ressources/outil.png'/>
+				<img id="chat" alt='Parler' src='./ressources/chat-icon.png'/>
+			</div>
+		</div>
+		<div id="cluster-pic" class='bg-grey shadow'>
+			<div id='pic-overlay'>
+				<a href='http://www.ikea.com/'><div id='chair-hitbox'></div></a>
+				<a href='http://www.apple.com/'><div id='apple-hitbox'></div></a>
+			</div>
+			<img src='./ressources/cluster.jpg' height='562px'/>
+		</div>
+		<div id="right-side" class='side bg-grey shadow'>
+			<div class="side-container">
+				<img id="book" alt="Dont't panic" src='./ressources/book.png'/>
+				<img id="towel" alt="towel" src='./ressources/towel.png'/>
+				<div id="wall"></div>
+			</div>
+		</div>
+		<div id='wtf' class='shadow'>
+			<div id='wtf-container'>
+				<span>Vous <span style='font-size: 32px;'>entrez</span> alors dans une grande piece remplie d'ordinateurs...</span><br />
+				<span>- Bonjour, vous êtes nouveau ici ?</span>
+				<form>
+					<input type='text' style='width:378px;' />
+					<input type='submit' style='margin-left: 7px;' value='Repondre' />
+					<!-- <button>Repondre</button> -->
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

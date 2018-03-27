@@ -1,0 +1,186 @@
+body {
+	background: #505050;
+	width: 1420px;
+	margin: auto;
+}
+
+#preview {
+	position: absolute;
+	top: 0;
+	left: 337px;
+	width: 1887px;
+	height: 100%;
+	background-image: url('./background.png');
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	filter: grayscale(100%);
+}
+
+.bg-grey {
+	background: #909090;
+}
+
+.shadow {
+	border-radius: 10px;
+	box-shadow: 10px 10px 12px black;
+}
+
+#header {
+	margin-top: 17px;
+	padding: 10px;
+	height: 117px;}
+
+#header-left {
+	float: left;
+}
+
+#header-right {
+	float: right;
+}
+
+#loupe {
+	position: absolute;
+	margin-left: -254px;
+}
+
+#header-buttons {
+	line-height: 117px;
+}
+
+#reload {
+	height: 20px;
+	position: absolute;
+	vertical-align: top;
+}
+
+#close {
+	vertical-align: bottom;
+}
+
+
+#container {
+	padding: 20px 30px;
+	text-align: center;
+}
+
+#banner {
+	background: url('./ressources/day_of_the_42.png');
+	height: 238px;
+	width: 922px;
+}
+
+.side {
+	width: 140px;
+	height: 425px;
+}
+
+
+#left-side {
+	float: left;
+}
+
+#left-side > .side-container {
+	position: relative;
+	left: -2px;
+}
+
+.side-container > img, #wall {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#arrow {
+	height: 70px;
+	margin-top: 15px;
+}
+
+#main {
+	height: 70px;
+	margin-top: 10px;
+}
+
+#oeil {
+	border: 5px solid red;
+	border-radius: 5px;
+	margin-top: 5px;
+	height: 65px;
+}
+
+#outil {
+	height: 70px;
+	margin-top: 5px;
+}
+
+#chat {
+	height: 70px;
+	margin-top: 7px;
+}
+
+#right-side {
+	float: right;
+}
+
+#book {
+	margin-top: 15px;
+	height: 95px;
+	/* opacity: 0.5; */
+}
+
+#towel {
+	height: 51px;
+	margin-top: 12px;
+}
+
+#cluster-pic {
+	display: inline-block;
+	margin: 0px 30px;
+	width: 1020px;
+}
+
+#cluster-pic > img {
+	margin: 10px 10px 5px 10px;
+}
+
+#wall {
+	background: url('./ressources/brick.jpg');
+	width: 120px;
+	height: 70px;
+	margin-top: 5px;
+}
+
+#wtf {
+	position: relative;
+	top: -75px;
+	left: -74px;
+	height: 170px;
+	width: 520px;
+	background: #88ff89;
+}
+
+#wtf-container {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	text-align: initial;
+	padding: 10px 10px;
+}
+
+#pic-overlay {
+	position: absolute;
+}
+
+#chair-hitbox {
+	width: 150px;
+	height: 224px;
+	position: relative;
+	left: 333px;
+	top: 330px;
+}
+
+#apple-hitbox {
+	width: 220px;
+	height: 150px;
+	position: relative;
+	left: 780px;
+	top: 100px;
+}
