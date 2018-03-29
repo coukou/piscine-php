@@ -2,7 +2,7 @@
 <?php
 if (!isset($argv[1]))
 	exit();
-if (!file_exists($argv[1]))
+if (!file_exists($argv[1]) || !is_readable($argv[1]))
 	exit();
 $pattern = "/([\d]{2}:[\d]{2}:[\d]{2},[\d]{3} --> [\d]{2}:[\d]{2}:[\d]{2},[\d]{3})\n(.+)/";
 $matches = array();

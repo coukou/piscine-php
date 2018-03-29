@@ -4,7 +4,7 @@ if ($argc != 3)
 	exit();
 $file = $argv[1];
 $hkey = $argv[2];
-if (!file_exists($file))
+if (!file_exists($file) || !is_readable($argv[1]))
 	exit();
 $lines = explode("\n", file_get_contents($file));
 if (count($lines) == 0)
@@ -20,7 +20,8 @@ foreach ($lines as $line) {
 	foreach ($header_keys as $i => $hk)
 		$tmp[$hk] = $data[$i];
 	foreach ($header_keys as $hk) {
-		$$hk[$tmp[$hkey]] = $tmp[$hk];
+		$hk_ptr = &$$hk;
+		$hk_ptr[$tmp[$hkey]] = $tmp[$hk];
 	}
 }
 function ask_command() {

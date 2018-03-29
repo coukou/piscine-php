@@ -34,8 +34,8 @@
 	}
 	function get_outdir($url) {
 		$matches;
-		preg_match("/https?:\/\/(.*?)\//i", $url, $matches);
-		return $matches[1];
+		preg_match("/(?:www\.)?\w+\.\w+/i", $url, $matches);
+		return $matches[0];
 	}
 	if (isset($argv[1])) {
 		if (($html = get_html($argv[1])) != null) {
