@@ -1,0 +1,152 @@
+* {
+    font-family: Roboto;
+  }
+
+header
+{
+	position: relative;
+	background-color: purple;
+	font-size: 24px;
+	min-width: 900px;
+	width: 95vw;
+	height: 30px;
+	padding: 10px 1vw;
+
+	color:white;
+}
+
+
+button
+{
+	padding: 1em 2em;
+	margin: 3px;
+	border: 0;
+	outline: 0;
+	color: white;
+	background-color: #2196F3;
+	text-transform: uppercase;
+	border-radius: 0.15em;
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+
+	overflow: hidden;
+	position: relative;
+}
+
+button .ripple
+{
+
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	transform: scale(0);
+	animation: ripple 0.6s linear;
+}
+
+@keyframes ripple
+{
+		to
+		{
+			transform: scale(2.5);
+			opacity: 0;
+		}
+}
+
+.articlewrapper
+{
+	background-color: white;
+	padding: 5px;
+	min-width: 400px;
+	border-radius: 2px;
+		box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+	margin: 2%;
+	position: relative;
+}
+
+.article {
+	background-color: white;
+	padding: 5px;
+	border-radius: 2px;
+		box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+	margin: 2%;
+}
+
+.price
+{
+  font-style: bold;
+  font-size: 20px;
+}
+
+.articledata
+{
+	font-size: 18px;
+	float: left;
+}
+
+.articleoptions{
+	float: right;
+	margin-top: 18px;
+}
+
+.article::after
+{
+	clear: both;
+	display: block;
+	content: "";
+}
+
+#leftheader
+{
+	position: absolute;
+	left: 10px;
+}
+
+#rightheader
+{
+	position: absolute;
+	right: 10px;
+	text-overflow: hidden;
+	text-decoration: none;
+	color: white;
+}
+
+#rightheader a
+{
+	text-decoration: none;
+	color: white;
+}
+
+.wrapper{
+	width: 100%;
+	position: relative;
+}
+
+#shopgrid{
+	margin: 100px 0.6%;
+	display: grid;
+grid-gap: 10px;
+	min-width: 900px;
+	grid-template-columns: repeat(6, 16%);
+		grid-template-rows: repeat(7, 120px + 1vw);
+	}
+
+
+.element{
+	background: beige;
+	border: 3px solid purple;
+	min-width: 150px;
+	border-radius: 4px;
+	font-size: 5px + 1.2vw;
+}
+.element.null{
+	border: 3px solid blue;
+		visibility:hidden;
+}
+.stuff{
+	width: 100%;
+	overflow: hidden;
+}
+
+.name{
+	text-align: center;
+	overflow: hidden;
+}

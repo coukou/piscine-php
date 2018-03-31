@@ -1,0 +1,1 @@
+CREATE TABLE `rush00`.`factures` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `date` INT NOT NULL , `price` INT NOT NULL , `products` JSON NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

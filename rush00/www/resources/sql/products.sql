@@ -1,0 +1,1 @@
+CREATE TABLE `rush00`.`products` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , `img` VARCHAR(256) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , `cat_id` INT NOT NULL , `price` INT NOT NULL , `stock` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
