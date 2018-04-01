@@ -1,7 +1,7 @@
 <?php
+include("../includes/utils.php");
 session_start();
 
-if ($_SESSION['access'] != 1)
-	header('Location: /');
+restrict_access(1, "/");
 ?>
-coucou admin
+<a href="products/">products</a>

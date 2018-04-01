@@ -11,6 +11,7 @@ function database_product_delete($id)
 	{
 		if ($stmt = mysqli_prepare($conn, "DELETE FROM products WHERE id=?"))
 		{
+			var_dump($id);
 			mysqli_stmt_bind_param($stmt, "i", $id);
 			mysqli_stmt_execute($stmt);
 			if (mysqli_stmt_affected_rows($stmt) != 1)

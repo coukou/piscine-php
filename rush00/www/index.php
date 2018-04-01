@@ -2,5 +2,5 @@
 
 include("./includes/database.php");
 
-$products = database_product_get_all();
-print_r($products);
+session_start();
+print_r($_SESSION);

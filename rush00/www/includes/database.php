@@ -10,3 +10,4 @@ require_once("database/products/get.php");
 require_once("database/products/get_all.php");
 require_once("database/products/create.php");
 require_once("database/products/delete.php");
+require_once("database/products/update.php");

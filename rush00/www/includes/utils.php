@@ -11,3 +11,11 @@ function check_params_isset($params, ...$keys) {
 function utils_pass_encrypt($pass) {
 	return hash('whirlpool', $pass);
 }
+
+function restrict_access($access, $redirect = "/") {
+	if ($_SESSION['access'] != $access) {
+		header("Location: $redirect");
+		return (true);
+	}
+	return (false);
+}
