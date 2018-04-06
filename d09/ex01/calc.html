@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>calc</title>
+</head>
+<body>
+	<form id="calc">
+		<input type="text" name="left" value="0" />
+		<select name="op">
+			<option value="add">+</option>
+			<option value="sub">-</option>
+			<option value="mult">*</option>
+			<option value="div">/</option>
+			<option value="mod">%</option>
+		</select>
+		<input type="text" name="right" value="0" />
+		<input type="submit" value="Try me!" />
+	</form>
+	<script>
+		function alert_log(msg) {
+			alert(msg);
+			console.log(msg);
+		}
+		document.getElementById('calc').addEventListener('submit', (e) =>{
+			e.preventDefault();
+			const left = parseInt(e.target.querySelector('input[name=left]').value);
+			const op = e.target.querySelector('select[name=op]').value;
+			const right = parseInt(e.target.querySelector('input[name=right]').value);
+			if (left < 0 || right < 0)
+				return alert('Error :(');
+			if ((op === 'div' || op === 'mod') && right == 0)
+				return alert_log('It’s over 9000!');
+			switch (op) {
+				case 'add':
+					alert_log(left + right);
+					break;
+				case 'sub':
+					alert_log(left - right);
+					break;
+				case 'mult':
+					alert_log(left * right);
+					break;
+				case 'div':
+					alert_log(left / right);
+					break;
+				case 'mod':
+					alert_log(left % right);
+					break;
+			}
+		})
+		setInterval(() => alert('Please, use me...'), 30 * 1000);
+	</script>
+</body>
+</html>
